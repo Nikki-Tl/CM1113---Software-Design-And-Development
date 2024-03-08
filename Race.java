@@ -1,4 +1,6 @@
 public class Race {
+    private int minAge;
+    private int maxAge;
     private int hp;
     private int str;
     private int dex;
@@ -7,7 +9,9 @@ public class Race {
     private int cha;
 
     
-    public Race(int hp, int str, int dex, int intel, int wis, int cha) {
+    public Race(int minAge, int maxAge, int hp, int str, int dex, int intel, int wis, int cha) {
+        this.minAge = minAge;
+        this.maxAge = maxAge;
         this.hp = hp;
         this.str = str;
         this.dex = dex;
@@ -15,7 +19,19 @@ public class Race {
         this.wis = wis;
         this.cha = cha;
     }
-    
+
+    public int getminAge(){
+        return minAge;
+    }
+    public void setminAge(int minAge){
+        this.minAge = minAge;
+    }
+    public int getmaxAge(){
+        return maxAge;
+    }
+    public void setmaxAge(int maxAge){
+        this.maxAge = maxAge;
+    }
     public int getHp() {
         return hp;
     }
