@@ -11,7 +11,6 @@ public class Player {
     
     /* Initialising Variables */
     private String name;
-    private int age;
     private String race;
     private String type;
 
@@ -24,9 +23,8 @@ public class Player {
 
 
     /* Constructor */
-    public Player(String name, int age, String race, String type, int hp, int str, int dex, int intel, int wis, int cha) {
+    public Player(String name, String race, String type, int hp, int str, int dex, int intel, int wis, int cha) {
         this.name = name;
-        this.age = age;
         this.race = race;
         this.type = type;
         this.hp = hp;
@@ -46,16 +44,7 @@ public class Player {
     public void setName(String name) {
         this.name = name;
     }
-
-    /* age */
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
+    
     /* race */
     public String getRace() {
         return race;
