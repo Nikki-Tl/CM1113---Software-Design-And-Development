@@ -25,7 +25,7 @@ public class Test {
             String tempName = sc.next();
     
     
-            Player jamal = new Player(tempName, 0, null, null, 0, 0, 0, 0, 0, 0);
+            Player jamal = new Player(tempName, 0, null, null, 0, 0, 0, 0, 0);
     
             System.out.println(jamal.getName());
     
