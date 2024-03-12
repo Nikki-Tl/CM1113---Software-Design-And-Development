@@ -1,8 +1,6 @@
 public class Type {
 
     /* Initialising Variables */
-    private String typeName;
-
     private int typeStatHp;
     private int typeStatStr;
     private int typeStatdex;
@@ -20,10 +18,8 @@ public class Type {
 
 
     /* Constructor */
-    public Type(String typeName, int typeStatHp, int typeStatStr, int typeStatdex, int typeStatInt, int typeStatWis, int typeStatCha, String[] armour, String[] weapon, String[] extra) {
+    public Type(int typeStatHp, int typeStatStr, int typeStatdex, int typeStatInt, int typeStatWis, int typeStatCha, String[] armour, String[] weapon, String[] extra) {
         
-        this.typeName = typeName;
-
         this.typeStatHp = typeStatHp;
         this.typeStatStr = typeStatStr;
         this.typeStatdex = typeStatdex;
@@ -40,14 +36,6 @@ public class Type {
 
 
     /* Getters and Setters per Variable */
-    /* name */
-    public String getTypeName() {
-        return typeName;
-    }
-    public void setTypeName(String typeName) {
-        this.typeName = typeName;
-    }
-
     /* hp */
     public int getTypeStatHp() {
         return typeStatHp;
