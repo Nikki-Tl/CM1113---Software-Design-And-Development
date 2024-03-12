@@ -115,9 +115,12 @@ public class Player {
     }
 
 
-    
-   
- 
+    public String toString() {
+        
+        String displayPlayer = "Name: " + name + "\n" + "Race: " + race.getRaceName() + "\n" + "Type: " + type.getTypeName() + "\n" + "Hp: " + totalStatHp + "\n" + "Str: " + totalStatStr + "\n" + "Dex: " + totalStatDex + "\n" + "Int: " + totalStatInt + "\n" + "Wis: " + totalStatWis + "\n" + "Cha: " + totalStatCha;
+        return displayPlayer;
+
+    } 
     
     
 
