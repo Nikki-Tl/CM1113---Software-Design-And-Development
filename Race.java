@@ -1,72 +1,106 @@
+
+/*
+*   ----------------------------------------------------------------
+*
+*   
+*
+*   ----------------------------------------------------------------
+*/
+
 public class Race {
+
+    /* Initialising Variables */
     private int minAge;
     private int maxAge;
-    private int hp;
-    private int str;
-    private int dex;
-    private int intel;
-    private int wis;
-    private int cha;
 
-    
-    public Race(int minAge, int maxAge, int hp, int str, int dex, int intel, int wis, int cha) {
+    private int raceStatHp;
+    private int raceStatStr;
+    private int raceStatDex;
+    private int raceStatInt;
+    private int raceStatWis;
+    private int raceStatCha;
+
+    /* Cnstructor */
+    public Race(int minAge, int maxAge, int raceStatHp, int raceStatStr, int raceStatDex, int raceStatInt, int raceStatWis, int raceStatCha) {
+        
         this.minAge = minAge;
         this.maxAge = maxAge;
-        this.hp = hp;
-        this.str = str;
-        this.dex = dex;
-        this.intel = intel;
-        this.wis = wis;
-        this.cha = cha;
+
+        this.raceStatHp = raceStatHp;
+        this.raceStatStr = raceStatStr;
+        this.raceStatDex = raceStatDex;
+        this.raceStatInt = raceStatInt;
+        this.raceStatWis = raceStatWis;
+        this.raceStatCha = raceStatCha;
     }
 
-    public int getminAge(){
+    /* Getters and Setters per Variable */
+    /* min age */
+    public int getMinAge() {
         return minAge;
     }
-    public void setminAge(int minAge){
+    public void setMinAge(int minAge) {
         this.minAge = minAge;
     }
-    public int getmaxAge(){
+
+    /* max age */
+    public int getMaxAge() {
         return maxAge;
     }
-    public void setmaxAge(int maxAge){
+    public void setMaxAge(int maxAge) {
         this.maxAge = maxAge;
     }
-    public int getHp() {
-        return hp;
+
+    /* hp */
+    public int getRaceStatHp() {
+        return raceStatHp;
     }
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setRaceStatHp(int raceStatHp) {
+        this.raceStatHp = raceStatHp;
     }
-    public int getStr() {
-        return str;
+
+    /* str */
+    public int getRaceStatStr() {
+        return raceStatStr;
     }
-    public void setStr(int str) {
-        this.str = str;
+    public void setRaceStatStr(int raceStatStr) {
+        this.raceStatStr = raceStatStr;
     }
-    public int getDex() {
-        return dex;
+
+    /* dex */
+    public int getRaceStatDex() {
+        return raceStatDex;
     }
-    public void setDex(int dex) {
-        this.dex = dex;
+    public void setRaceStatDex(int raceStatDex) {
+        this.raceStatDex = raceStatDex;
     }
-    public int getIntel() {
-        return intel;
+
+    /* int */
+    public int getRaceStatInt() {
+        return raceStatInt;
     }
-    public void setIntel(int intel) {
-        this.intel = intel;
+    public void setRaceStatInt(int raceStatInt) {
+        this.raceStatInt = raceStatInt;
     }
-    public int getWis() {
-        return wis;
+
+    /* wis */
+    public int getRaceStatWis() {
+        return raceStatWis;
     }
-    public void setWis(int wis) {
-        this.wis = wis;
+    public void setRaceStatWis(int raceStatWis) {
+        this.raceStatWis = raceStatWis;
     }
-    public int getCha() {
-        return cha;
+
+    /* cha */
+    public int getRaceStatCha() {
+        return raceStatCha;
     }
-    public void setCha(int cha) {
-        this.cha = cha;
+    public void setRaceStatCha(int raceStatCha) {
+        this.raceStatCha = raceStatCha;
     }
+
+
+    
+    
 }
 
