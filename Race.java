@@ -13,6 +13,8 @@ public class Race {
     private int minAge;
     private int maxAge;
 
+    private String raceName;
+
     private int raceStatHp;
     private int raceStatStr;
     private int raceStatDex;
@@ -21,10 +23,12 @@ public class Race {
     private int raceStatCha;
 
     /* Cnstructor */
-    public Race(int minAge, int maxAge, int raceStatHp, int raceStatStr, int raceStatDex, int raceStatInt, int raceStatWis, int raceStatCha) {
+    public Race(int minAge, int maxAge, String raceName, int raceStatHp, int raceStatStr, int raceStatDex, int raceStatInt, int raceStatWis, int raceStatCha) {
         
         this.minAge = minAge;
         this.maxAge = maxAge;
+
+        this.raceName = raceName;
 
         this.raceStatHp = raceStatHp;
         this.raceStatStr = raceStatStr;
@@ -41,6 +45,14 @@ public class Race {
     }
     public void setMinAge(int minAge) {
         this.minAge = minAge;
+    }
+
+    /* race name */
+    public String getRaceName() {
+        return raceName;
+    }
+    public void setRaceName(String raceName) {
+        this.raceName = raceName;
     }
 
     /* max age */
@@ -99,8 +111,15 @@ public class Race {
         this.raceStatCha = raceStatCha;
     }
 
-
+    /* To String */
+    public String toString() {
     
+        String displayRace = "Hp: " + raceStatHp + "\n" + "Str: " + raceStatStr + "\n" + "Dex: " + raceStatDex + "\n" + 
+                             "Int: " + raceStatInt + "\n" + "Wis: " + raceStatWis + "\n" + "Cha: " + raceStatCha + "\n";	
+
+        return displayRace;
+
+    }
     
 }
 
