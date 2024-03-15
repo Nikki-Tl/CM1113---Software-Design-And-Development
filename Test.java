@@ -1,4 +1,5 @@
 
+
 /*
 *   ----------------------------------------------------------------
 *   N: i cannot add the stats onto totalStats at all, I have tried for like 30mins straight and gave up... have fun
@@ -32,7 +33,7 @@ public class Test {
         Type Fighter = new Type("Fighter", 1, 1, 1, 0, 0, 0, null, null, null);
         Type Paladin = new Type("Paladin", 3, 2, -1, -1, -1, 1, null, null, null);
         Type Ranger = new Type("Ranger", -2, 1, 3, 0, 1, 0, null, null, null);
-        Type Rouge = new Type("Rouge", 0, 0, 3, 0, -1, 1, null, null, null);
+        Type Rouge = new Type("Rogue", 0, 0, 3, 0, -1, 1, null, null, null);
         Type Sorcerer = new Type("Sorcerer", -1, -2, 1, 3, 2, 0, null, null, null);
 
         /* Player Setup */
@@ -94,7 +95,7 @@ public class Test {
                 jamal.setType(Paladin);
             } else if (tempType.equals("Ranger")) {
                 jamal.setType(Ranger);
-            } else if (tempType.equals("Rouge")) {
+            } else if (tempType.equals("Rogue")) {
                 jamal.setType(Rouge);
             } else if (tempType.equals("Sorcerer")) {
                 jamal.setType(Sorcerer);
@@ -124,3 +125,4 @@ public class Test {
 
 
 }
+
