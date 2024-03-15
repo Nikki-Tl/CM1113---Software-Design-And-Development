@@ -1,11 +1,13 @@
 public class Weapon {
-
+    
+/* Initialising variables */
     private String type;
     private int damage;
     private int manaCost;
     private int durability;
     private String itemDescription;
-
+    
+/* Conatructor method */
     public Weapon(String type, int damage, int manaCost, int durability, String itemDescription) {
         this.type = type;
         this.damage = damage;
@@ -13,7 +15,8 @@ public class Weapon {
         this.durability = durability;
         this.itemDescription = itemDescription;
     }
-
+    
+/* Getting and Setting variables */
     public String getType() {
         return type;
     }
@@ -45,6 +48,8 @@ public class Weapon {
         this.itemDescription = itemDescription;
     }
 
+    /* toString method for weapons */
+    
     public String toString(){
     String displayWeapon = "Weapon: " + type + "\n" + "\n" + 
                             "Damage: " + damage + "\n" +
