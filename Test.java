@@ -110,6 +110,12 @@ public class Test {
         /* toString */
         System.out.println(jamal.toString());
 
+        /* kane bit */
+
+        Weapon riversofblood = new Weapon("Rivers of Blood", 50, 10, 100, "Forged in the Land of Blossoms, this sword imitates the flow of blood with its slashes.");
+
+        System.out.println(riversofblood);
+
 
 
 
