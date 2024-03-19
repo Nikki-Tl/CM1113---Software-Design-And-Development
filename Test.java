@@ -16,13 +16,13 @@ public class Test {
 
         /* setups */
         /* Setting up Race options */
-        Race Human = new Race(20, 100, "Human", 0, 0, 1, 1, 0, 1);
-        Race Elf = new Race(100, 750, "Elf", 0, 0, 2, 1, 0, 0);
-        Race Orc = new Race(15, 75, "Orc", 2, 2, 1, -2, 0, 0);
-        Race Dwarf = new Race(50, 350, "Dwarf", 1, 0, 0, 1, 0, 1);
-        Race Dragonborn = new Race(15, 80, "Dragonborn", 2, 1, 1, -2, 0, 1);
-        Race Halfling = new Race(20, 250, "Halfling", -1, -1, 1, 2, 0, 2);
-        Race Tiefling = new Race(20, 100, "Tiefling", 0, -1, 0, 1, 1, 2);
+        Race Human = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Human");
+        Race Elf = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Elf");
+        Race Orc = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Orc");
+        Race Dwarf = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Dwarf");
+        Race Dragonborn = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Dragonborn");
+        Race Halfling = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Halfling");
+        Race Tiefling = new Race(100, 10, 10, 10, 10, 10, 1, 100, "Tiefling");
         
         /* Type setup */
         /* N: change depending on what we do for arrays */
@@ -37,7 +37,7 @@ public class Test {
         Type Sorcerer = new Type("Sorcerer", -1, -2, 1, 3, 2, 0, null, null, null);
 
         /* Player Setup */
-        Player jamal = new Player(null, null, null, 0, 0, 0, 0, 0, 0);
+        Player jamal = new Player(0, 0, 0, 0, 0, 0);
 
 
 
@@ -119,11 +119,15 @@ public class Test {
 
         /* finn bit */
 
-        Monster banshee = new Monster("Banshee", "A banshee is the hateful spirit of a once beautiful female elf. It appears as a luminous, wispy form that vaguely recalls its mortal features. A banshee's face is wreathed in a wild tangle of hair, and its body is clad in wispy rags that flutter and stream around it. A banshee is forever bound to the place of its demise. It abhors mirrors, for it can't bear to see the horrors of its undead existence.", 58, 1, 14, 12, 11, 17);
+        Monster banshee = new Monster(58, 13, 9, 14, 12, 11, "A banshee is the hateful spirit of a once beautiful female elf. It appears as a luminous, wispy form that vaguely recalls its mortal features. A banshee's face is wreathed in a wild tangle of hair, and its body is clad in wispy rags that flutter and stream around it. A banshee is forever bound to the place of its demise. It abhors mirrors, for it can't bear to see the horrors of its undead existence.", "Banshee");
         System.out.println(banshee);
 
-        Monster bramzarkTheDespoiler = new Monster("Bramzark the despoiler", "Big bad boss man", 580, 13, 9, 13, 13, 13);
+        Monster bramzarkTheDespoiler = new Monster(580, 13, 9, 13, 13, 13, "big bad boss man", "Bramzark the despoiler");
         System.out.println(bramzarkTheDespoiler);
 
 
     }
+
+
+
+}
