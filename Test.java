@@ -117,12 +117,13 @@ public class Test {
 
         System.out.println(riversofblood);
 
+        /* finn bit */
 
+        Monster banshee = new Monster("Banshee", "A banshee is the hateful spirit of a once beautiful female elf. It appears as a luminous, wispy form that vaguely recalls its mortal features. A banshee's face is wreathed in a wild tangle of hair, and its body is clad in wispy rags that flutter and stream around it. A banshee is forever bound to the place of its demise. It abhors mirrors, for it can't bear to see the horrors of its undead existence.", 58, 1, 14, 12, 11, 17);
+        System.out.println(banshee);
+
+        Monster bramzarkTheDespoiler = new Monster("Bramzark the despoiler", "Big bad boss man", 580, 13, 9, 13, 13, 13);
+        System.out.println(bramzarkTheDespoiler);
 
 
     }
-
-
-
-}
-
