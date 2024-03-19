@@ -1,47 +1,22 @@
-
-/*
-*   ----------------------------------------------------------------
-*   @author: Nikola Tluczek
-*   @author:
-*   @author:
-*   @author:
-*
-*   ----------------------------------------------------------------
-*/
-
 public class Player {
-    
-    /* Initialising Variables */
-    /* NT: Possible change for age variable as range is set in Race? */
     private String name;
-    private Race race;
-    private Type type;
 
-    private int totalStatHp;
-    private int totalStatStr;
-    private int totalStatDex;
-    private int totalStatInt;
-    private int totalStatWis;
-    private int totalStatCha;
+    private int statHp;
+    private int statStr;
+    private int statDex;
+    private int statInt;
+    private int statWis;
+    private int statCha;
 
-
-    /* Constructor */
-    public Player(String name, Race race, Type type, int totalStatHp, int totalStatStr, int totalStatDex, int totalStatInt, int totalStatWis, int totalStatCha) {
+    public Player(String name, int statHp, int statStr, int statDex, int statInt, int statWis, int statCha) {
         this.name = name;
-        this.race = race;
-        this.type = type;
-
-        this.totalStatHp = totalStatHp;
-        this.totalStatStr = totalStatStr;
-        this.totalStatDex = totalStatDex;
-        this.totalStatInt = totalStatInt;
-        this.totalStatWis = totalStatWis;
-        this.totalStatCha = totalStatCha;
+        this.statHp = statHp;
+        this.statStr = statStr;
+        this.statDex = statDex;
+        this.statInt = statInt;
+        this.statWis = statWis;
+        this.statCha = statCha;
     }
-
-
-    /* Getters and Setters per Variable */
-    /* name */
     public String getName() {
         return name;
     }
@@ -49,79 +24,59 @@ public class Player {
         this.name = name;
     }
 
-    /* N: cannot have getters and setters for race abd type? */
-    /* race */
-    public Race getRace() {
-        return race;
+    public int getStatHp() {
+        return statHp;
     }
-    public void setRace(Race race) {
-        this.race = race;
+    public void setStatHp(int statHp) {
+        this.statHp = statHp;
     }
 
-    /* type */
-    public Type getType() {
-        return type;
+    public int getStatStr() {
+        return statStr;
     }
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    /* hp */
-    public int getTotalStatHp() {
-        return totalStatHp;
-    }
-    public void setTotalStatHp(int totalStatHp) {
-        this.totalStatHp = totalStatHp;
-    }
-
-    /* str */
-    public int getTotalStatStr() {
-        return totalStatStr;
-    }
-    public void setTotalStatStr(int totalStatStr) {
-        this.totalStatStr = totalStatStr;
-    }
-
-    /* dex */
-    public int getTotalStatDex() {
-        return totalStatDex;
-    }
-    public void setTotalStatDex(int totalStatDex) {
-        this.totalStatDex = totalStatDex;
-    }
-
-    /* intel */
-    public int getTotalStatInt() {
-        return totalStatInt;
-    }
-    public void setTotalStatInt(int totalStatInt) {
-        this.totalStatInt = totalStatInt;
-    }
-
-    /* wis */
-    public int getTotalStatWis() {
-        return totalStatWis;
-    }
-    public void setTotalStatWis(int totalStatWis) {
-        this.totalStatWis = totalStatWis;
-    }
-
-    /* cha */
-    public int getTotalStatCha() {
-        return totalStatCha;
-    }
-    public void setTotalStatCha(int totalStatCha) {
-        this.totalStatCha = totalStatCha;
+    public void setStatStr(int statStr) {
+        this.statStr = statStr;
     }
 
 
-    public String toString() {
-        
-        String displayPlayer = "Name: " + name + "\n" + "Race: " + race.getRaceName() + "\n" + "Type: " + type.getTypeName() + "\n" + "Hp: " + totalStatHp + "\n" + "Str: " + totalStatStr + "\n" + "Dex: " + totalStatDex + "\n" + "Int: " + totalStatInt + "\n" + "Wis: " + totalStatWis + "\n" + "Cha: " + totalStatCha;
-        return displayPlayer;
+    public int getStatDex() {
+        return statDex;
+    }
+    public void setStatDex(int statDex) {
+        this.statDex = statDex;
+    }
 
-    } 
-    
-    
 
+    public int getStatInt() {
+        return statInt;
+    }
+    public void setStatInt(int statInt) {
+        this.statInt = statInt;
+    }
+
+
+    public int getStatWis() {
+        return statWis;
+    }
+    public void setStatWis(int statWis) {
+        this.statWis = statWis;
+    }
+
+
+    public int getStatCha() {
+        return statCha;
+    }
+    public void setStatCha(int statCha) {
+        this.statCha = statCha;
+    }
+
+    public String toString(){
+        return("Name: " + getName() + "\n" +
+                "Hit Points: " + getStatHp() + "\n" +
+                "Strength: " + getStatHp() + "\n" +
+                "Dexterity: " + getStatHp() + "\n" +
+                "Intelligence: " + getStatHp() + "\n" +
+                "Wisdom: " + getStatHp() + "\n" +
+                "Charisma: " + getStatHp() + "\n");
+    }
 }
