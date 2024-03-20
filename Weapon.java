@@ -1,62 +1,71 @@
 public class Weapon {
-    
-/* Initialising variables */
-    private String type;
-    private int damage;
-    private int manaCost;
-    private int durability;
-    private String itemDescription;
-    
-/* Conatructor method */
-    public Weapon(String type, int damage, int manaCost, int durability, String itemDescription) {
-        this.type = type;
-        this.damage = damage;
-        this.manaCost = manaCost;
-        this.durability = durability;
-        this.itemDescription = itemDescription;
-    }
-    
-/* Getting and Setting variables */
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
-    }
-    public int getDamage() {
-        return damage;
-    }
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-    public int getManaCost() {
-        return manaCost;
-    }
-    public void setManaCost(int manaCost) {
-        this.manaCost = manaCost;
-    }
-    public int getDurability() {
-        return durability;
-    }
-    public void setDurability(int durability) {
-        this.durability = durability;
-    }
-    public String getItemDescription() {
-        return itemDescription;
-    }
-    public void setItemDescription(String itemDescription) {
-        this.itemDescription = itemDescription;
-    }
 
-    /* toString method for weapons */
+    private final String[] Stats = new String[]{
+        "Name", "Damage", "Mana Cost", "Durability"
+    };
+
+    private final String[] WeaponName = new String[]{
+        "First Weapon", "Second Weapon", "Third Weapon"
+    };
+
+    private final String[] Profession = new String[]{
+        "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer"
+    };
     
-    public String toString(){
-    String displayWeapon = "Weapon: " + type + "\n" + "\n" + 
-                            "Damage: " + damage + "\n" +
-                            "Mana Cost: " + manaCost + "\n" +
-                            "Durability " + durability + "\n" +
-                            itemDescription;
-                            
-        return displayWeapon;
-    }
+    private final Object[][][] arr = new Object[][][]{
+        //barbarian
+        {
+        {"Battleaxe",20,5,100},
+        {"Warhammer",30,10,100},
+        {"Longsword",10,0,100},
+        },
+        //bard
+        {
+        {"guitar", 20,30,50},
+        {"violin", 30,50,50},
+        {"triangle",45,75,10},
+        },
+        //cleric
+        {
+        {"Staff of shocking",30,30,50},
+        {"Cursed Hands",20,30,100},
+        {"Spell book of Flames",50,75,30},
+        },
+        //druid
+        {
+        {"Staff of Growth",30,30,50},
+        {"Scimitar",20,10,100},
+        {"Sickle",10,0,100},
+        },
+        //fighter
+        {
+        {"Shortsword",10,0,100},
+        {"Spear",20,10,200},
+        {"Halberd",30,20,100},
+        },
+        //paladin
+        {
+        {"Greatsword",40,30,100},
+        {"Battleaxe",20,5,100},
+        {"Halberd",30,20,100},
+        },
+        //ranger
+        {
+        {"Shortbow",20,10,50},
+        {"Longbow",35,30,100},
+        {"Crossbow",30,20,100},
+        },
+        //rogue
+        {
+        {"Dagger",10,0,100},
+        {"Scimitar",20,10,100},
+        {"Throwing Knives",30,10,5},
+        },
+        //sorcerer
+        {
+        {"Staff of Freezing",30,30,50},
+        {"Crystal ball",70,50,10},
+        {"Spell book of Wind",50,75,30}
+        }
+    };
 }
