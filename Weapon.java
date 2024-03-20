@@ -12,7 +12,7 @@ public class Weapon {
         "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer"
     };
     
-    private final Object[][][] arr = new Object[][][]{
+    private final Object[][][] WeaponArray = new Object[][][]{
         //barbarian
         {
         {"Battleaxe",20,5,100},
