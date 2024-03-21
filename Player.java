@@ -1,82 +1,114 @@
+/*
+ * @author Nikola Tluczek (N)
+ * 
+ */
+
+/*
+  *  NOTES/LOGS:
+  *
+  *  // N - (i think ill make a seperate final "CharacterCreator" class which will have all of the things like name, 
+  *         racename, professionname, and all of the stats (add weapon and stuff to it too) and that will be the final 
+  *         class we use to put everything the user said into so we can use it for combat.) (we would make monsters on this too so maybe @Finn can work on that? (HMU if need))
+  *
+  */
+
+
 public class Player {
-    private String name;
+    
+    // N - initialising stat variables
+    protected int health;
+    protected int strength;
+    protected int dexterity;
+    protected int intelligence;
+    protected int wisdom;
+    protected int charisma;
 
-    private int statHp;
-    private int statStr;
-    private int statDex;
-    private int statInt;
-    private int statWis;
-    private int statCha;
+    
+    // N - default constructor
+        public Player(int health, int strength, int dexterity, int intelligence, int wisdom, int charisma) {
 
-    public Player(String name, int statHp, int statStr, int statDex, int statInt, int statWis, int statCha) {
-        this.name = name;
-        this.statHp = statHp;
-        this.statStr = statStr;
-        this.statDex = statDex;
-        this.statInt = statInt;
-        this.statWis = statWis;
-        this.statCha = statCha;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+        this.health = health;
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.intelligence = intelligence;
+        this.wisdom = wisdom;
+        this.charisma = charisma;
 
-    public int getStatHp() {
-        return statHp;
-    }
-    public void setStatHp(int statHp) {
-        this.statHp = statHp;
-    }
-
-    public int getStatStr() {
-        return statStr;
-    }
-    public void setStatStr(int statStr) {
-        this.statStr = statStr;
     }
 
 
-    public int getStatDex() {
-        return statDex;
+    // N - getter and setter methods for each stat
+    public int getHealth() {
+
+        return health;
     }
-    public void setStatDex(int statDex) {
-        this.statDex = statDex;
+    public void setHealth(int health) {
+
+        this.health = health;
+
+    }
+    
+    public int getStrength() {
+
+        return strength;
+    }
+    public void setStrength(int strength) {
+
+        this.strength = strength;
+
+    }
+
+    public int getDexterity() {
+
+        return dexterity;
+    }
+    public void setDexterity(int dexterity) {
+
+        this.dexterity = dexterity;
+
+    }
+
+    public int getIntelligence() {
+
+        return intelligence;
+    }
+    public void setIntelligence(int intelligence) {
+
+        this.intelligence = intelligence;
+
+    }
+
+    public int getWisdom() {
+
+        return wisdom;
+    }
+    public void setWisdom(int wisdom) {
+
+        this.wisdom = wisdom;
+
+    }
+
+    public int getCharisma() {
+
+        return charisma;
+    }
+    public void setCharisma(int charisma) {
+
+        this.charisma = charisma;
+
     }
 
 
-    public int getStatInt() {
-        return statInt;
-    }
-    public void setStatInt(int statInt) {
-        this.statInt = statInt;
+    // N - method to display player stats (toString)
+    public void displayStats() {
+
+        System.out.println("Health: " + health);
+        System.out.println("Strength: " + strength);
+        System.out.println("Dexterity: " + dexterity);
+        System.out.println("Intelligence: " + intelligence);
+        System.out.println("Wisdom: " + wisdom);
+        System.out.println("Charisma: " + charisma);
+
     }
 
-
-    public int getStatWis() {
-        return statWis;
-    }
-    public void setStatWis(int statWis) {
-        this.statWis = statWis;
-    }
-
-
-    public int getStatCha() {
-        return statCha;
-    }
-    public void setStatCha(int statCha) {
-        this.statCha = statCha;
-    }
-
-    public String toString(){
-        return("Name: " + getName() + "\n" +
-                "Hit Points: " + getStatHp() + "\n" +
-                "Strength: " + getStatHp() + "\n" +
-                "Dexterity: " + getStatHp() + "\n" +
-                "Intelligence: " + getStatHp() + "\n" +
-                "Wisdom: " + getStatHp() + "\n" +
-                "Charisma: " + getStatHp() + "\n");
-    }
 }
