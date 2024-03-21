@@ -43,8 +43,7 @@ public class Race extends Player {
     // N - method to display race name along with player stats
     public void displayStats() {
 
-        System.out.println("Race: " + raceName);
-
+        System.out.println();
         super.displayStats();
 
     }
