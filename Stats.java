@@ -13,7 +13,7 @@
   */
 
 
-public class Player {
+public class Stats {
     
     // N - initialising stat variables
     protected int health;
@@ -25,7 +25,7 @@ public class Player {
 
     
     // N - default constructor
-        public Player(int health, int strength, int dexterity, int intelligence, int wisdom, int charisma) {
+        public Stats(int health, int strength, int dexterity, int intelligence, int wisdom, int charisma) {
 
         this.health = health;
         this.strength = strength;
