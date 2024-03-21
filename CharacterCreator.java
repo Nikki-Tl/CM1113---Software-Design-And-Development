@@ -1,4 +1,17 @@
-public class CharacterCreator extends Player {
+/*
+ * @author Nikola Tluczek (N)
+ * 
+ */
+
+/*
+  *  NOTES/LOGS:
+  *
+  *  // N - Add weapons, armour and extras onto this class
+  *  // N - use this class to create other entities for combat purposes
+  *
+  */
+
+public class CharacterCreator extends Stats {
 
     private String name;
     private String raceName;
