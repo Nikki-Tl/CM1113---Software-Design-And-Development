@@ -2,8 +2,8 @@
 * @author Nikola Tluczek (N)
 *         - running Player, Race and Professions questions for users
 * 
-* @author
-* 
+* @author Kane Farquharson (K)
+*         - 
 * 
 * 
 * 
@@ -19,224 +19,274 @@
 
 import java.util.*;
 
-public class Test {
-    
-    public static void main(String[] args) {
+ public class Test {
+     
+        public static void main(String[] args) {
 
-        // N - creating scanner (use this for whole of test? it does complain its never closed but idk how to deal with that)
-        Scanner scanner = new Scanner(System.in);
+        int weaponProfession = 0;
+ 
+         // N - creating scanner (use this for whole of test? it does complain its never closed but idk how to deal with that)
+         Scanner scanner = new Scanner(System.in);
+ 
+ 
+         // N - creating each race description
+         HashMap <String, String> raceHashMap = new HashMap<String, String>();
+         raceHashMap.put("Human", "\nDescription: Human \n");
+         raceHashMap.put("Elf", "\nDescription: Elf \n");
+         raceHashMap.put("Orc", "\nDescription: Orc \n");
+         raceHashMap.put("Dwarf", "\nDescription: Dwarf \n");
+         raceHashMap.put("Dragonborn", "\nDescription: Dragonborn \n");
+         raceHashMap.put("Halfling", "\nDescription: Halfling \n");
+         raceHashMap.put("Tiefling", "\nDescription: Tiefling \n");
+ 
+         // N - creating each profession description
+         HashMap <String, String> professionHashMap = new HashMap<String, String>();
+         professionHashMap.put("Barbarian", "\nDescription: Barbarian \n");
+         professionHashMap.put("Bard", "\nDescription: Bard \n");
+         professionHashMap.put("Cleric", "\nDescription: Cleric \n");
+         professionHashMap.put("Druid", "\nDescription: Druid \n");
+         professionHashMap.put("Fighter", "\nDescription: Fighter \n");
+         professionHashMap.put("Paladin", "\nDescription: Paladin \n");
+         professionHashMap.put("Ranger", "\nDescription: Ranger \n");
+         professionHashMap.put("Rogue", "\nDescription: Rogue \n");
+         professionHashMap.put("Sorcerer", "\nDescription: Sorcerer \n");
+ 
+ 
+ 
+ 
+ 
+         // N - start of ui
+         System.out.println();
+         System.out.println(" ---------- CHARACTER CREATION ----------");
+ 
+         // N - user ui and input for race
+         System.out.println();
+         System.out.println(" ---------- RACE ----------");
+         System.out.println("Please Select your race, here are your options:");  
+         System.out.println();
+         System.out.println(raceHashMap);
+         System.out.println();
+ 
+         // N - creating a Race instance
+         Race racePlayer = new Race(null, 0, 0, 0, 0, 0, 0);
+ 
+         // N - set stats depending on user input
+         for (int i = 0; i < 1; i++) {
+ 
+             System.out.print("Input: ");
+             racePlayer.setRaceName(scanner.next());
+             System.out.println();
+ 
+             if (racePlayer.getRaceName().equals("Human")) {
+                 racePlayer.setDexterity(1);
+                 racePlayer.setIntelligence(1);
+                 racePlayer.setCharisma(1);
+             }
+             else if (racePlayer.getRaceName().equals("Elf")) {
+                 racePlayer.setDexterity(1);
+                 racePlayer.setIntelligence(2);
+             }
+             else if (racePlayer.getRaceName().equals("Orc")) {
+                 racePlayer.setHealth(2);
+                 racePlayer.setStrength(2);
+                 racePlayer.setDexterity(1);
+                 racePlayer.setIntelligence(-2);
+             } 
+             else if (racePlayer.getRaceName().equals("Dwarf")) {
+                 racePlayer.setHealth(1);
+                 racePlayer.setIntelligence(1);
+                 racePlayer.setCharisma(1);
+             }
+             else if (racePlayer.getRaceName().equals("Dragonborn")) {
+                 racePlayer.setHealth(2);
+                 racePlayer.setStrength(1);
+                 racePlayer.setDexterity(1);
+                 racePlayer.setIntelligence(-2);
+                 racePlayer.setCharisma(1);
+             }
+             else if (racePlayer.getRaceName().equals("Halfling")) {
+                 racePlayer.setHealth(-1);
+                 racePlayer.setStrength(-1);
+                 racePlayer.setDexterity(1);
+                 racePlayer.setIntelligence(2);
+                 racePlayer.setCharisma(2);
+             }
+             else if (racePlayer.getRaceName().equals("Tiefling")) {
+                 racePlayer.setStrength(-1);
+                 racePlayer.setIntelligence(1);
+                 racePlayer.setWisdom(1);
+                 racePlayer.setCharisma(2);
+             } else {
+                 i--;
+             }
+         
+         }
+ 
+         // N - print user stats for race chosen
+         System.out.println("Player stats:");
+         racePlayer.displayStats();
+         System.out.println(raceHashMap.get(racePlayer.getRaceName()));
+         System.out.println();
+ 
+ 
+         // N - user ui and input for profession
+         System.out.println();
+         System.out.println(" ---------- PROFESSION ----------");
+         System.out.println("Please Select your profession, here are your options:");
+         System.out.println();
+         System.out.println(professionHashMap);
+         System.out.println();
+ 
+ 
+         // N - Creating a Profession instance
+         Profession professionPlayer = new Profession(null, 0, 0, 0, 0, 0, 0);
+ 
+         // N - set stats depending on user input
+         for (int i = 0; i < 1; i++) {
+ 
+             System.out.print("Input: ");
+             professionPlayer.setProfessionName(scanner.next());
+ 
+             if (professionPlayer.getProfessionName(). equals("Barbarian")) {
+                 professionPlayer.setHealth(2);
+                 professionPlayer.setStrength(3);
+                 professionPlayer.setIntelligence(-2);
+                 weaponProfession = 0;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Bard")) {
+                 professionPlayer.setHealth(-1);
+                 professionPlayer.setStrength(-1);
+                 professionPlayer.setDexterity(1);
+                 professionPlayer.setIntelligence(1);
+                 professionPlayer.setCharisma(3);
+                 weaponProfession = 1;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Cleric")) {
+                 professionPlayer.setHealth(-2);
+                 professionPlayer.setStrength(-2);
+                 professionPlayer.setDexterity(1);
+                 professionPlayer.setIntelligence(2);
+                 professionPlayer.setWisdom(2);
+                 professionPlayer.setCharisma(1);
+                 weaponProfession = 2;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Druid")) {
+                 professionPlayer.setStrength(-1);
+                 professionPlayer.setIntelligence(1);
+                 professionPlayer.setWisdom(3);
+                 weaponProfession = 3;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Fighter")) {
+                 professionPlayer.setHealth(1);
+                 professionPlayer.setStrength(1);
+                 professionPlayer.setDexterity(1);
+                 weaponProfession = 4;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Paladin")) {
+                 professionPlayer.setHealth(3);
+                 professionPlayer.setStrength(2);
+                 professionPlayer.setDexterity(-1);
+                 professionPlayer.setIntelligence(-1);
+                 professionPlayer.setWisdom(-1);
+                 professionPlayer.setCharisma(1);
+                 weaponProfession = 5;
+             
+             }
+             else if (professionPlayer.getProfessionName().equals("Ranger")) {
+                 professionPlayer.setHealth(-2);
+                 professionPlayer.setStrength(1);
+                 professionPlayer.setDexterity(3);
+                 professionPlayer.setWisdom(1);
+                 weaponProfession = 6;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Rogue")) {
+                 professionPlayer.setDexterity(3);
+                 professionPlayer.setWisdom(-1);
+                 professionPlayer.setCharisma(1);
+                 weaponProfession = 7;
+ 
+             }
+             else if (professionPlayer.getProfessionName().equals("Sorcerer")) {
+                 professionPlayer.setHealth(-1);
+                 professionPlayer.setStrength(-2);
+                 professionPlayer.setDexterity(1);
+                 professionPlayer.setIntelligence(3);
+                 professionPlayer.setWisdom(2);
+                 weaponProfession = 8;
+ 
+             } else {
+                 i--;
+             }
+ 
+ 
+         }
+ 
+         // N - print user stats for profession chosen
+         System.out.println();
+         System.out.println("Player stats:");
+         professionPlayer.displayStats();
+         System.out.println();
+ 
+ 
+         // N - players total stats
+         System.out.println(" ---------- Total Stats ----------");
+         // N - adding stats from both classes chosen and shoving them into the character creator 
+         CharacterCreator player1 = new CharacterCreator(null, racePlayer.getRaceName(), professionPlayer.getProfessionName(), racePlayer.getHealth() + professionPlayer.getHealth(), 
+                                                         racePlayer.getStrength() + professionPlayer.getStrength(), racePlayer.getDexterity() + professionPlayer.getDexterity(), 
+                                                         racePlayer.getIntelligence() + professionPlayer.getIntelligence(), racePlayer.getWisdom() + professionPlayer.getWisdom(), 
+                                                         racePlayer.getCharisma() + professionPlayer.getCharisma());
+         
+ 
+         // N - printing final player stats ( play around with the display in the character creator class? (or not cuz its universal for all of the entities idk))
+         System.out.println();
+         player1.displayStats();
+         System.out.println();
 
+         /* k */
 
-        // N - creating each race description
-        HashMap <String, String> raceHashMap = new HashMap<String, String>();
-        raceHashMap.put("Human", "\nDescription: Human \n");
-        raceHashMap.put("Elf", "\nDescription: Elf \n");
-        raceHashMap.put("Orc", "\nDescription: Orc \n");
-        raceHashMap.put("Dwarf", "\nDescription: Dwarf \n");
-        raceHashMap.put("Dragonborn", "\nDescription: Dragonborn \n");
-        raceHashMap.put("Halfling", "\nDescription: Halfling \n");
-        raceHashMap.put("Tiefling", "\nDescription: Tiefling \n");
+         System.out.println("----------CHOOSE YOUR WEAPON----------");
 
-        // N - creating each profession description
-        HashMap <String, String> professionHashMap = new HashMap<String, String>();
-        professionHashMap.put("Barbarian", "\nDescription: Barbarian \n");
-        professionHashMap.put("Bard", "\nDescription: Bard \n");
-        professionHashMap.put("Cleric", "\nDescription: Cleric \n");
-        professionHashMap.put("Druid", "\nDescription: Druid \n");
-        professionHashMap.put("Fighter", "\nDescription: Fighter \n");
-        professionHashMap.put("Paladin", "\nDescription: Paladin \n");
-        professionHashMap.put("Ranger", "\nDescription: Ranger \n");
-        professionHashMap.put("Rogue", "\nDescription: Rogue \n");
-        professionHashMap.put("Sorcerer", "\nDescription: Sorcerer \n");
-
-
-
-
-
-        // N - start of ui
-        System.out.println();
-        System.out.println(" ---------- CHARACTER CREATION ----------");
-
-        // N - user ui and input for race
-        System.out.println();
-        System.out.println(" ---------- RACE ----------");
-        System.out.println("Please Select your race, here are your options:");  
-        System.out.println();
-        System.out.println(raceHashMap);
-        System.out.println();
-
-        // N - creating a Race instance
-        Race racePlayer = new Race(null, 0, 0, 0, 0, 0, 0);
-
-        // N - set stats depending on user input
-        for (int i = 0; i < 1; i++) {
-
-            System.out.print("Input: ");
-            racePlayer.setRaceName(scanner.next());
-            System.out.println();
-
-            if (racePlayer.getRaceName().equals("Human")) {
-                racePlayer.setDexterity(1);
-                racePlayer.setIntelligence(1);
-                racePlayer.setCharisma(1);
+         for (int i = 0; i < Weapon.WeaponArray[0][0].length - 1; i++ ){
+            for (int j = 0; j < Weapon.WeaponArray[0].length + 1; j++){
+                if (j == 1){
+                    System.out.print("Damage: ");
+                }
+                else if (j == 2){
+                    System.out.print("Mana Cost: ");
+                }
+                else if (j == 3){
+                    System.out.print("Durability: ");
+                }
+   
+                System.out.println(Weapon.WeaponArray[weaponProfession][i][j]);
             }
-            else if (racePlayer.getRaceName().equals("Elf")) {
-                racePlayer.setDexterity(1);
-                racePlayer.setIntelligence(2);
-            }
-            else if (racePlayer.getRaceName().equals("Orc")) {
-                racePlayer.setHealth(2);
-                racePlayer.setStrength(2);
-                racePlayer.setDexterity(1);
-                racePlayer.setIntelligence(-2);
-            } 
-            else if (racePlayer.getRaceName().equals("Dwarf")) {
-                racePlayer.setHealth(1);
-                racePlayer.setIntelligence(1);
-                racePlayer.setCharisma(1);
-            }
-            else if (racePlayer.getRaceName().equals("Dragonborn")) {
-                racePlayer.setHealth(2);
-                racePlayer.setStrength(1);
-                racePlayer.setDexterity(1);
-                racePlayer.setIntelligence(-2);
-                racePlayer.setCharisma(1);
-            }
-            else if (racePlayer.getRaceName().equals("Halfling")) {
-                racePlayer.setHealth(-1);
-                racePlayer.setStrength(-1);
-                racePlayer.setDexterity(1);
-                racePlayer.setIntelligence(2);
-                racePlayer.setCharisma(2);
-            }
-            else if (racePlayer.getRaceName().equals("Tiefling")) {
-                racePlayer.setStrength(-1);
-                racePlayer.setIntelligence(1);
-                racePlayer.setWisdom(1);
-                racePlayer.setCharisma(2);
-            } else {
-                i--;
-            }
-        
         }
+        Scanner sc = new Scanner(System.in);
+        String chosenWeapon = sc.nextLine();
 
-        // N - print user stats for race chosen
-        System.out.println("Player stats:");
-        racePlayer.displayStats();
-        System.out.println(raceHashMap.get(racePlayer.getRaceName()));
-        System.out.println();
+        int x = 0;
 
-
-        // N - user ui and input for profession
-        System.out.println();
-        System.out.println(" ---------- PROFESSION ----------");
-        System.out.println("Please Select your profession, here are your options:");
-        System.out.println();
-        System.out.println(professionHashMap);
-        System.out.println();
-
-
-        // N - Creating a Profession instance
-        Profession professionPlayer = new Profession(null, 0, 0, 0, 0, 0, 0);
-
-        // N - set stats depending on user input
-        for (int i = 0; i < 1; i++) {
-
-            System.out.print("Input: ");
-            professionPlayer.setProfessionName(scanner.next());
-
-            if (professionPlayer.getProfessionName(). equals("Barbarian")) {
-                professionPlayer.setHealth(2);
-                professionPlayer.setStrength(3);
-                professionPlayer.setIntelligence(-2);
-
+        while (x < Weapon.WeaponArray[0][0].length){
+            int i = 0;
+            while (i < Weapon.WeaponArray[0].length){
+                System.out.println(Weapon.WeaponArray[weaponProfession][i][0]);
+                if (String.valueOf(Weapon.WeaponArray[weaponProfession][i][0]).contains(chosenWeapon)){
+                    System.out.println("pass");
+                    i++;
+                }
+                else{
+                    i++;
+                    System.out.println("fail");
+                }
             }
-            else if (professionPlayer.getProfessionName().equals("Bard")) {
-                professionPlayer.setHealth(-1);
-                professionPlayer.setStrength(-1);
-                professionPlayer.setDexterity(1);
-                professionPlayer.setIntelligence(1);
-                professionPlayer.setCharisma(3);
-
-            }
-            else if (professionPlayer.getProfessionName().equals("Cleric")) {
-                professionPlayer.setHealth(-2);
-                professionPlayer.setStrength(-2);
-                professionPlayer.setDexterity(1);
-                professionPlayer.setIntelligence(2);
-                professionPlayer.setWisdom(2);
-                professionPlayer.setCharisma(1);
-
-            }
-            else if (professionPlayer.getProfessionName().equals("Druid")) {
-                professionPlayer.setStrength(-1);
-                professionPlayer.setIntelligence(1);
-                professionPlayer.setWisdom(3);
-
-            }
-            else if (professionPlayer.getProfessionName().equals("Fighter")) {
-                professionPlayer.setHealth(1);
-                professionPlayer.setStrength(1);
-                professionPlayer.setDexterity(1);
-
-            }
-            else if (professionPlayer.getProfessionName().equals("Paladin")) {
-                professionPlayer.setHealth(3);
-                professionPlayer.setStrength(2);
-                professionPlayer.setDexterity(-1);
-                professionPlayer.setIntelligence(-1);
-                professionPlayer.setWisdom(-1);
-                professionPlayer.setCharisma(1);
-            
-            }
-            else if (professionPlayer.getProfessionName().equals("Ranger")) {
-                professionPlayer.setHealth(-2);
-                professionPlayer.setStrength(1);
-                professionPlayer.setDexterity(3);
-                professionPlayer.setWisdom(1);
-
-            }
-            else if (professionPlayer.getProfessionName().equals("Rogue")) {
-                professionPlayer.setDexterity(3);
-                professionPlayer.setWisdom(-1);
-                professionPlayer.setCharisma(1);
-
-            }
-            else if (professionPlayer.getProfessionName().equals("Sorcerer")) {
-                professionPlayer.setHealth(-1);
-                professionPlayer.setStrength(-2);
-                professionPlayer.setDexterity(1);
-                professionPlayer.setIntelligence(3);
-                professionPlayer.setWisdom(2);
-
-            } else {
-                i--;
-            }
-
-
+            x++;
         }
-
-        // N - print user stats for profession chosen
-        System.out.println();
-        System.out.println("Player stats:");
-        professionPlayer.displayStats();
-        System.out.println();
-
-
-        // N - players total stats
-        System.out.println(" ---------- Total Stats ----------");
-        // N - adding stats from both classes chosen and shoving them into the character creator 
-        CharacterCreator player1 = new CharacterCreator(null, racePlayer.getRaceName(), professionPlayer.getProfessionName(), racePlayer.getHealth() + professionPlayer.getHealth(), 
-                                                        racePlayer.getStrength() + professionPlayer.getStrength(), racePlayer.getDexterity() + professionPlayer.getDexterity(), 
-                                                        racePlayer.getIntelligence() + professionPlayer.getIntelligence(), racePlayer.getWisdom() + professionPlayer.getWisdom(), 
-                                                        racePlayer.getCharisma() + professionPlayer.getCharisma());
-        
-
-        // N - printing final player stats ( play around with the display in the character creator class? (or not cuz its universal for all of the entities idk))
-        System.out.println();
-        player1.displayStats();
-        System.out.println();
-
         /* finn bit */
         Monster testDummy = new Monster(10, 0, 0, 1, 0, 0, "A dummy. Who you callin' dummy, dummy?", "Test Dummy", false);
 
