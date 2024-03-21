@@ -8,7 +8,7 @@
   *
   */
 
-public class Profession extends Player {
+public class Profession extends Stats {
 
     // N - professionName variable initialised
     private String professionName;
