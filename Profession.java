@@ -15,8 +15,8 @@ public class Profession extends Player {
 
 
     // N - constructor with the superclass Player Stats
-    public Profession(String professionName, int health, int strength, int dexterity, int intelligence, int wisdom, int charismatic) {
-        super(health, strength, dexterity, intelligence, wisdom, charismatic);
+    public Profession(String professionName, int health, int strength, int dexterity, int intelligence, int wisdom, int charisma) {
+        super(health, strength, dexterity, intelligence, wisdom, charisma);
         
         this.professionName = professionName;
 
@@ -37,8 +37,7 @@ public class Profession extends Player {
     // N - method to display profession name with stats
     public void displayStats() {
 
-        System.out.println("Profession: " + professionName);
-
+        System.out.println();
         super.displayStats();
 
     }
