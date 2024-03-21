@@ -15,8 +15,8 @@ public class Profession extends Player {
 
 
     // N - constructor with the superclass Player Stats
-    public Profession(String professionName, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charismatic) {
-        super(strength, dexterity, constitution, intelligence, wisdom, charismatic);
+    public Profession(String professionName, int health, int strength, int dexterity, int intelligence, int wisdom, int charismatic) {
+        super(health, strength, dexterity, intelligence, wisdom, charismatic);
         
         this.professionName = professionName;
 
