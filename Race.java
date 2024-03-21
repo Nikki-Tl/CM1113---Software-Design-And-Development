@@ -8,15 +8,20 @@
   *
   */
 
+
 public class Race extends Player {
 
     // N - raceName variable inistialised
+
     private String raceName;
 
 
+
+
+
     // N - constructor with superclass of Player stats added in
-    public Race(String raceName, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
-        super(strength, dexterity, constitution, intelligence, wisdom, charisma);
+    public Race(String raceName, int health,  int strength, int dexterity, int intelligence, int wisdom, int charisma) {
+        super(health, strength, dexterity, intelligence, wisdom, charisma);
 
         this.raceName = raceName;
 
