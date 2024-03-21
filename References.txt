@@ -2,6 +2,8 @@ All References for the assessment used:
 
 Nikola:
  - hashmaps - https://www.codingninjas.com/studio/library/introduction-to-hash-map
+            - https://www.baeldung.com/java-linked-hashmap
+            - https://stackoverflow.com/questions/26306147/getter-setter-for-hashmap-using-generics
  - the whole of W3Schools
 
 kane:
