@@ -182,12 +182,6 @@ public class Test {
         player1.displayStats();
         System.out.println();
 
-        /* kane bit */
-
-        Weapon riversofblood = new Weapon("Rivers of Blood", 50, 10, 100, "Forged in the Land of Blossoms, this sword imitates the flow of blood with its slashes.");
-
-        System.out.println(riversofblood);
-
         /* finn bit */
 
         Monster banshee = new Monster(58, 13, 9, 14, 12, 11, "A banshee is the hateful spirit of a once beautiful female elf. It appears as a luminous, wispy form that vaguely recalls its mortal features. A banshee's face is wreathed in a wild tangle of hair, and its body is clad in wispy rags that flutter and stream around it. A banshee is forever bound to the place of its demise. It abhors mirrors, for it can't bear to see the horrors of its undead existence.", "Banshee");
