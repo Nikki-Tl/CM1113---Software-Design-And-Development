@@ -21,7 +21,7 @@ import java.util.*;
 
 public class Test {
     
-    public static void main(String[] args) {
+       public static void main(String[] args) {
 
         // N - creating scanner (use this for whole of test? it does complain its never closed but idk how to deal with that)
         Scanner scanner = new Scanner(System.in);
@@ -35,14 +35,52 @@ public class Test {
         int charisma = 0;
 
 
+        
 
-        // N - Creating a Race instance
+        // N - creating each race description
+        HashMap <String, String> raceHashMap = new HashMap<String, String>();
+        raceHashMap.put("Human", "\nDescription: Human \n");
+        raceHashMap.put("Elf", "\nDescription: Elf \n");
+        raceHashMap.put("Orc", "\nDescription: Orc \n");
+        raceHashMap.put("Dwarf", "\nDescription: Dwarf \n");
+        raceHashMap.put("Dragonborn", "\nDescription: Dragonborn \n");
+        raceHashMap.put("Halfling", "\nDescription: Halfling \n");
+        raceHashMap.put("Tiefling", "\nDescription: Tiefling \n");
+
+        // N - creating each profession description
+        HashMap <String, String> professionHashMap = new HashMap<String, String>();
+        professionHashMap.put("Barbarian", "\nDescription: Barbarian \n");
+        professionHashMap.put("Bard", "\nDescription: Bard \n");
+        professionHashMap.put("Cleric", "\nDescription: Cleric \n");
+        professionHashMap.put("Druid", "\nDescription: Druid \n");
+        professionHashMap.put("Fighter", "\nDescription: Fighter \n");
+        professionHashMap.put("Paladin", "\nDescription: Paladin \n");
+        professionHashMap.put("Ranger", "\nDescription: Ranger \n");
+        professionHashMap.put("Rogue", "\nDescription: Rogue \n");
+        professionHashMap.put("Sorcerer", "\nDescription: Sorcerer \n");
+
+
+
+
+        // N - user ui and input
+        System.out.println();
+        System.out.println(" ---------- CHARACTER CREATION ----------");
+        System.out.println();
+        System.out.println(" ---------- RACE ----------");
+        System.out.println("Please Select your race, here are your options:");  
+        System.out.println();
+        System.out.println(raceHashMap);
+        System.out.println();
+
+        // N - creating a Race instance
         Race racePlayer = new Race(null, health, strength, dexterity, intelligence, wisdom, charisma);
 
+        // N - set stats depending on user input
         for (int i = 0; i < 1; i++) {
 
-            System.out.print("Enter Race: ");
+            System.out.print("Input: ");
             racePlayer.setRaceName(scanner.next());
+            System.out.println();
 
             if (racePlayer.getRaceName().equals("Human")) {
                 racePlayer.setDexterity(dexterity += 1);
@@ -89,8 +127,18 @@ public class Test {
         
         }
 
-        System.out.println("Race Player stats:");
+        System.out.println("Player stats:");
         racePlayer.displayStats();
+        System.out.println(raceHashMap.get(racePlayer.getRaceName()));
+        System.out.println();
+
+
+
+        System.out.println();
+        System.out.println(" ---------- PROFESSION ----------");
+        System.out.println("Please Select your profession, here are your options:");
+        System.out.println();
+        System.out.println(professionHashMap);
         System.out.println();
 
 
@@ -99,7 +147,7 @@ public class Test {
 
         for (int i = 0; i < 1; i++) {
 
-            System.out.print("Enter Profession: ");
+            System.out.print("Input: ");
             professionPlayer.setProfessionName(scanner.next());
 
             if (professionPlayer.getProfessionName(). equals("Barbarian")) {
@@ -166,33 +214,24 @@ public class Test {
                 professionPlayer.setIntelligence(intelligence += 3);
                 professionPlayer.setWisdom(wisdom += 2);
 
+            } else {
+                i--;
             }
 
 
         }
 
-        System.out.println("Profession Player stats:");
+        System.out.println();
+        System.out.println("Player stats:");
         professionPlayer.displayStats();
         System.out.println();
 
+        CharacterCreator player1 = new CharacterCreator(null, racePlayer.getRaceName(), professionPlayer.getProfessionName(), health, strength, dexterity, intelligence, wisdom, charisma);
+        System.out.println(player1);
+
         
-        // N - Creating a Player instance
-        Player player1 = new Player(health, strength, dexterity, intelligence, wisdom, charisma);
-        System.out.println("Player stats:");
-        player1.displayStats();
-        System.out.println();
-
-        /* finn bit */
-
-        Monster banshee = new Monster(58, 13, 9, 14, 12, 11, "A banshee is the hateful spirit of a once beautiful female elf. It appears as a luminous, wispy form that vaguely recalls its mortal features. A banshee's face is wreathed in a wild tangle of hair, and its body is clad in wispy rags that flutter and stream around it. A banshee is forever bound to the place of its demise. It abhors mirrors, for it can't bear to see the horrors of its undead existence.", "Banshee");
-        System.out.println(banshee);
-
-        Monster bramzarkTheDespoiler = new Monster(580, 13, 9, 13, 13, 13, "big bad boss man", "Bramzark the despoiler");
-        System.out.println(bramzarkTheDespoiler);
-
 
     }
-
 
 
 }
