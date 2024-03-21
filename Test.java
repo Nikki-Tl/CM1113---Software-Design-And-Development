@@ -229,9 +229,32 @@ public class Test {
         CharacterCreator player1 = new CharacterCreator(null, racePlayer.getRaceName(), professionPlayer.getProfessionName(), health, strength, dexterity, intelligence, wisdom, charisma);
         System.out.println(player1);
 
-        
+        /* finn bit */
+        Monster testDummy = new Monster(10, 0, 0, 1, 0, 0, "A dummy. Who you callin' dummy, dummy?", "Test Dummy", false);
 
+        Monster banshee = new Monster(58, 13, 9, 14, 12, 11, "A banshee is the hateful spirit of a once beautiful female elf. It appears as a luminous, wispy form that vaguely recalls its mortal features. A banshee's face is wreathed in a wild tangle of hair, and its body is clad in wispy rags that flutter and stream around it. A banshee is forever bound to the place of its demise. It abhors mirrors, for it can't bear to see the horrors of its undead existence.", "Banshee", false);
+
+        Monster bramzarkTheDespoiler = new Monster(580, 13, 9, 13, 13, 13, "big bad boss man", "Bramzark the despoiler", false);
+
+        Moves punch = new Moves(null, null, 0);
+
+        for (int i = 0; i < 1; i++) {
+            System.out.print(" You have encountered a Test Dummy! Which attack would you like to use? ");
+            punch.setName(scanner.next());
+            if (punch.getName().equals("Punch")) {
+                testDummy.setHealth(testDummy.getHealth() - 5);
+                System.out.println("Hit! " + testDummy.getMonsterName() + " 's health is now down to " + testDummy.getHealth());
+                    if (testDummy.getHealth() == 0) {
+                    testDummy.setIsDead(testDummy.getIsDead() == true);
+                    System.out.println(testDummy.getMonsterName() + " is dead.");
+                    i++;
+                    }
+                professionPlayer.setHealth(professionPlayer.getHealth() - 5);
+                System.out.println("You have been hit by " + testDummy.getMonsterName() + "! Your health is now down to " + professionPlayer.getHealth());
+                i--;
+            }
+           
+
+        }
     }
-
-
-}
+ }
