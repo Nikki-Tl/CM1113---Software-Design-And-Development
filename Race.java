@@ -8,43 +8,38 @@
   *
   */
 
+public class Profession extends Stats {
 
-public class Race extends Stats {
-
-    // N - raceName variable inistialised
-
-    private String raceName;
+    // N - professionName variable initialised
+    private String professionName;
 
 
-
-
-
-    // N - constructor with superclass of Player stats added in
-    public Race(String raceName, int health,  int strength, int dexterity, int intelligence, int wisdom, int charisma) {
+    // N - constructor with the superclass Stats
+    public Profession(String professionName, int health, int strength, int dexterity, int intelligence, int wisdom, int charisma) {
         super(health, strength, dexterity, intelligence, wisdom, charisma);
-
-        this.raceName = raceName;
-
-    }
-
-
-    // N - getter and setter for race name
-    public String getRaceName() {
-
-        return raceName;
-    }
-    public void setRaceName(String raceName) {
-
-        this.raceName = raceName;
+        
+        this.professionName = professionName;
 
     }
 
 
-    // N - method to display race name along with player stats
+    // N - getter and setter for professionName
+    public String getProfessionName() {
+
+        return professionName;
+    }
+    public void setProfessionName(String professionName) {
+
+        this.professionName = professionName;
+
+    }
+
+    // N - method to display profession name with stats
     public void displayStats() {
 
         System.out.println();
         super.displayStats();
 
     }
+
 }
