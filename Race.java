@@ -9,7 +9,7 @@
   */
 
 
-public class Race extends Player {
+public class Race extends Stats {
 
     // N - raceName variable inistialised
 
