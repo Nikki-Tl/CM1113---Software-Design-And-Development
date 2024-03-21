@@ -1,27 +1,27 @@
 /* 
- * @author Nikola Tluczek (N)
- *         - running Player, Race and Professions questions for users
- * 
- * @author
- * 
- * 
- * 
- * 
- */
+* @author Nikola Tluczek (N)
+*         - running Player, Race and Professions questions for users
+* 
+* @author
+* 
+* 
+* 
+* 
+*/
 
 /*
- *  NOTES/LOGS;
- * 
- *  // N - (for the race and profession section i think imma create all the classes as a hashmap and add the description of all of them so the user can see their stats if theyd like to then chose from em)
- *  // N - (i think we should have the player answer with numbers (1 - barbarian, 2 - bard) cuz otherwise its kinda annoying (also it will make for easier combat selection))
- * 
- */
+*  NOTES/LOGS;
+* 
+*  // N - (for the race and profession section i think imma create all the classes as a hashmap and add the description of all of them so the user can see their stats if theyd like to then chose from em)
+*  // N - (i think we should have the player answer with numbers (1 - barbarian, 2 - bard) cuz otherwise its kinda annoying (also it will make for easier combat selection))
+* 
+*/
 
 import java.util.*;
 
 public class Test {
     
-       public static void main(String[] args) {
+    public static void main(String[] args) {
 
         // N - creating scanner (use this for whole of test? it does complain its never closed but idk how to deal with that)
         Scanner scanner = new Scanner(System.in);
@@ -244,25 +244,39 @@ public class Test {
 
         Monster bramzarkTheDespoiler = new Monster(580, 13, 9, 13, 13, 13, "big bad boss man", "Bramzark the despoiler", false);
 
-        Moves punch = new Moves(null, null, 0);
+        Moves move = new Moves(null, null, 0);
 
         for (int i = 0; i < 1; i++) {
             System.out.print(" You have encountered a Test Dummy! Which attack would you like to use? ");
-            punch.setName(scanner.next());
-            if (punch.getName().equals("Punch")) {
-                testDummy.setHealth(testDummy.getHealth() - 5);
+            move.setName(scanner.next());
+            if (move.getName().equals("Punch")) {
+                testDummy.setHealth(testDummy.getHealth() - 2);
                 System.out.println("Hit! " + testDummy.getMonsterName() + " 's health is now down to " + testDummy.getHealth());
-                    if (testDummy.getHealth() == 0) {
+                professionPlayer.setHealth(professionPlayer.getHealth() - 5);
+
+                if (testDummy.getHealth() <= 0) {
                     testDummy.setIsDead(testDummy.getIsDead() == true);
                     System.out.println(testDummy.getMonsterName() + " is dead.");
                     i++;
-                    }
-                professionPlayer.setHealth(professionPlayer.getHealth() - 5);
-                System.out.println("You have been hit by " + testDummy.getMonsterName() + "! Your health is now down to " + professionPlayer.getHealth());
-                i--;
-            }
-           
+                } else {
+                    System.out.println("You have been hit by " + testDummy.getMonsterName() + "! Your health is now down to " + professionPlayer.getHealth());
+                    i--;
+                }
 
+            } else if (move.getName().equals("Kick")) {                
+                testDummy.setHealth(testDummy.getHealth() - 5);
+                System.out.println("Hit! " + testDummy.getMonsterName() + " 's health is now down to " + testDummy.getHealth());                 
+                professionPlayer.setHealth(professionPlayer.getHealth() - 5);
+
+                if (testDummy.getHealth() <= 0) {
+                    testDummy.setIsDead(testDummy.getIsDead() == true);
+                    System.out.println(testDummy.getMonsterName() + " is dead.");
+                    i++;
+                } else {
+                    System.out.println("You have been hit by " + testDummy.getMonsterName() + "! Your health is now down to " + professionPlayer.getHealth());
+                    i--;
+                }
+            }
         }
     }
- }
+}
