@@ -14,7 +14,7 @@ public class Profession extends Stats {
     private String professionName;
 
 
-    // N - constructor with the superclass Player Stats
+    // N - constructor with the superclass Stats
     public Profession(String professionName, int health, int strength, int dexterity, int intelligence, int wisdom, int charisma) {
         super(health, strength, dexterity, intelligence, wisdom, charisma);
         
