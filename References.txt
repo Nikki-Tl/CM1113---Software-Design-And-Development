@@ -1,7 +1,8 @@
 All References for the assessment used:
 
 Nikola:
- -
+ - hashmaps - https://www.codingninjas.com/studio/library/introduction-to-hash-map
+ - the whole of W3Schools
 
 kane:
  -
