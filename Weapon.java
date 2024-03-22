@@ -1,16 +1,4 @@
 public class Weapon {
-
-    private final String[] Stats = new String[]{
-        "Name", "Damage", "Mana Cost", "Durability"
-    };
-
-    private final String[] WeaponName = new String[]{
-        "First Weapon", "Second Weapon", "Third Weapon"
-    };
-
-    private final String[] Profession = new String[]{
-        "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer"
-    };
     
     private final Object[][][] WeaponArray = new Object[][][]{
         //barbarian
