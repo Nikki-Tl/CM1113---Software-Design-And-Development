@@ -1,6 +1,6 @@
 public class Weapon {
     
-    private final Object[][][] WeaponArray = new Object[][][]{
+    public static Object[][][] WeaponArray = new Object[][][]{
         //barbarian
         {
         {"Battleaxe",20,5,100},
