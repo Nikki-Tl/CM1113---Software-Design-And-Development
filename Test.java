@@ -250,43 +250,44 @@ import java.util.*;
 
          /* k */
 
-         System.out.println("----------CHOOSE YOUR WEAPON----------");
+         Weapon weaponTest = new Weapon(professionPlayer.getProfessionName(), 0, 0, 0, 0, 0, 0, 0);
 
-         for (int i = 0; i < Weapon.WeaponArray[0][0].length - 1; i++ ){
-            for (int j = 0; j < Weapon.WeaponArray[0].length + 1; j++){
-                if (j == 1){
-                    System.out.print("Damage: ");
-                }
-                else if (j == 2){
-                    System.out.print("Mana Cost: ");
-                }
-                else if (j == 3){
-                    System.out.print("Durability: ");
-                }
-   
-                System.out.println(Weapon.WeaponArray[weaponProfession][i][j]);
-            }
-        }
+         weaponTest.printQuestionWeapon();
+
         Scanner sc = new Scanner(System.in);
-        String chosenWeapon = sc.nextLine();
 
         int x = 0;
+        Object chosenWeaponName = "";
+        Object chosenWeaponDamage = 0;
+        Object chosenWeaponMana = 0;
+        Object chosenWeaponDurability = 0;
+        
+            String weaponChoice = sc.nextLine();
+            while (x < Weapon.WeaponArray[0][0].length){
 
-        while (x < Weapon.WeaponArray[0][0].length){
-            int i = 0;
-            while (i < Weapon.WeaponArray[0].length){
-                System.out.println(Weapon.WeaponArray[weaponProfession][i][0]);
-                if (String.valueOf(Weapon.WeaponArray[weaponProfession][i][0]).contains(chosenWeapon)){
-                    System.out.println("pass");
-                    i++;
+                int i = 0;
+
+                while (i < Weapon.WeaponArray[0].length){
+
+                    if (String.valueOf(Weapon.WeaponArray[weaponTest.getWeaponProfession()][i][0]).contains(weaponChoice)){
+                        chosenWeaponName = Weapon.WeaponArray[weaponTest.getWeaponProfession()][i][0];
+                        chosenWeaponDamage = Weapon.WeaponArray[weaponTest.getWeaponProfession()][i][1];
+                        chosenWeaponMana = Weapon.WeaponArray[weaponTest.getWeaponProfession()][i][2];
+                        chosenWeaponDurability = Weapon.WeaponArray[weaponTest.getWeaponProfession()][i][3];
+                        i++;
+                    }
+                    else{
+                        i++;
+                    }
                 }
-                else{
-                    i++;
-                    System.out.println("fail");
-                }
+                x++;
             }
-            x++;
-        }
+        System.out.println(weaponTest.getWeaponProfession());
+        System.out.println("CHOSEN WEAPON: " + chosenWeaponName);
+        System.out.println(chosenWeaponDamage);
+        System.out.println(chosenWeaponMana);
+        System.out.println(chosenWeaponDurability);
+         
         /* finn bit */
         Monster testDummy = new Monster(10, 0, 0, 1, 0, 0, "A dummy. Who you callin' dummy, dummy?", "Test Dummy", false);
 
